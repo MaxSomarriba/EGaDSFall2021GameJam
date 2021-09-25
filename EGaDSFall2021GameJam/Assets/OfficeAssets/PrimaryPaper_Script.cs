@@ -16,7 +16,6 @@ public class PrimaryPaper_Script : MonoBehaviour
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-
         int random = UnityEngine.Random.Range(0, types.Length);
         currentType = types[random];
     }
@@ -29,10 +28,12 @@ public class PrimaryPaper_Script : MonoBehaviour
 
     public bool checkAnswer() {
         if (selectedType == currentType) {
+            Correct_Script.isImgOn = true;
             currentType = types[UnityEngine.Random.Range(0, types.Length)];
             PaperStack_Script.stackSize--;
             return true;
         } else {
+            TryAgain_Script.isImgOn = true;
             Debug.Log("Wrong type!");
             return false;
         }
