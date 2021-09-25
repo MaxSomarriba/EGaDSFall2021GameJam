@@ -7,20 +7,22 @@ public class TryAgain_Script : MonoBehaviour
 {
     public Image img;
     public static bool isImgOn;
-    public float time = 2f;
+    public float time = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnTimer());
         img.enabled = false;
         isImgOn = false;
+        StartCoroutine(SpawnTimer());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isImgOn) {
+            StartCoroutine(SpawnTimer());
+        }
     }
 
     IEnumerator SpawnTimer() {
