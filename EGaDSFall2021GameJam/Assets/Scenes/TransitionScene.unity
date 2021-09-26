@@ -1253,5 +1253,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLeft: 120
-  timeSeconds: 0.2
+  timeSeconds: 1
   timeLeftText: {fileID: 1415733229}

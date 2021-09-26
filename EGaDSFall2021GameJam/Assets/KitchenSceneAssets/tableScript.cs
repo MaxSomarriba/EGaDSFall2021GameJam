@@ -17,7 +17,7 @@ public class tableScript : MonoBehaviour
     public int paitenceLost;
     public SpriteRenderer spriteRenderer;
     public BoxCollider2D _boxCollider2D;
-
+    private AudioSource source;
     private static tableScript tableInstance;
 
     public enum food
@@ -41,7 +41,7 @@ public class tableScript : MonoBehaviour
         paitenceManagerScriptsUsedForLosingPaitence = GameObject.Find("PaitenceManager");
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         DecideOrder();
-        
+        source = GetComponent<AudioSource>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
     void Awake()
@@ -130,7 +130,7 @@ public class tableScript : MonoBehaviour
     }
     public void TakeOrder()
     {
-
+        source.Play();
         if (order == food.Pizza)
         {
             playerScriptsUsedForFoodReference.GetComponent<playerScripts>().addPizza();

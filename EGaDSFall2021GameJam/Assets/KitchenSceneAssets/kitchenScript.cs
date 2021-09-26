@@ -20,7 +20,7 @@ public class kitchenScript : MonoBehaviour
     private GameObject playerScriptsUsedForFoodReference;
     public SpriteRenderer spriteRenderer;
     public BoxCollider2D _boxCollider2D;
-
+    private AudioSource source;
     private static kitchenScript kitchenInstance;
 
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class kitchenScript : MonoBehaviour
     {
         initialFoodCreationYOffset = foodCreationYOffset;
         playerScriptsUsedForFoodReference = GameObject.Find("Player");
-
+        source = GetComponent<AudioSource>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         _boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
     }
@@ -119,6 +119,7 @@ public class kitchenScript : MonoBehaviour
     }
     public void createFood(GameObject food)
     {
+        source.Play();
         Instantiate(food, new Vector3(transform.position.x - 3, transform.position.y + foodCreationYOffset, 0), Quaternion.identity);
         foodCreationYOffset -= spacingBetweenFoodCreation;
         if(foodCreationYOffset == -spacingBetweenFoodCreation * numberOfTables)
