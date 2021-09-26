@@ -14,7 +14,7 @@ public class PaperStack_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnTimer());        
+        StartCoroutine(SpawnTimer());
     }
 
     // Update is called once per frame
