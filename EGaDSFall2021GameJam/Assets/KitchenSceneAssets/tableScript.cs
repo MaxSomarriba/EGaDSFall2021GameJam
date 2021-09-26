@@ -11,7 +11,7 @@ public class tableScript : MonoBehaviour
     private GameObject playerScriptsUsedForFoodReference;
     private GameObject paitenceManagerScriptsUsedForLosingPaitence;
     private holding whatIsPlayerHolding;
-    public int timeBeforeLosingPaitenceAfterOrdering;
+    public int timeBeforeLosingPaitenceAfterSittingDown;
     public int timeBeforeLosingMorePaitence;
     public int timeToEatFood;
     public int paitenceLost;
@@ -41,7 +41,7 @@ public class tableScript : MonoBehaviour
         paitenceManagerScriptsUsedForLosingPaitence = GameObject.Find("PaitenceManager");
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         DecideOrder();
-
+        
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
     void Awake()
@@ -81,7 +81,7 @@ public class tableScript : MonoBehaviour
             if (triggerActive && Input.GetKeyDown(KeyCode.Space) && TableState == tableState.Ordering)
             {
                 TakeOrder();
-                StartCoroutine(ExecuteAfterTime(timeBeforeLosingPaitenceAfterOrdering));
+                
             }
             if (triggerActive && Input.GetKeyDown(KeyCode.Space) && TableState == tableState.Waiting && string.Equals(whatIsPlayerHolding.ToString(), order.ToString()))
             {
@@ -93,18 +93,18 @@ public class tableScript : MonoBehaviour
             _boxCollider2D.enabled = false;
             spriteRenderer.enabled = false;
         }
-
+        if (sceneName == "WinScene" || sceneName == "Gameover" || sceneName == "MainMenu")
+        {
+            Destroy(gameObject);
+        }
     }
     IEnumerator ExecuteAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
 
         paitenceManagerScriptsUsedForLosingPaitence.GetComponent<paitenceManagerScript>().losePaitence(paitenceLost);
-        if (TableState == tableState.Waiting)
-        {
-            StartCoroutine(ExecuteAfterTime(timeBeforeLosingMorePaitence));
-
-        }
+        
+        StartCoroutine(ExecuteAfterTime(timeBeforeLosingMorePaitence));
     }
     IEnumerator EatFoodExecuteAfterTime(float time)
     {
@@ -148,6 +148,7 @@ public class tableScript : MonoBehaviour
 
     public void DecideOrder()
     {
+        StartCoroutine(ExecuteAfterTime(timeBeforeLosingPaitenceAfterSittingDown)); //start countdown
         order = GetRandomEnum<food>();
     }
     static T GetRandomEnum<T>()

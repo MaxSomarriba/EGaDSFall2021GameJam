@@ -38,6 +38,10 @@ public class burgerScript : MonoBehaviour
         }else{
             spriteRenderer.enabled = false;
         }
+        if (sceneName == "WinScene" || sceneName == "Gameover" || sceneName == "MainMenu")
+        {
+            Destroy(gameObject);
+        }
 
     }
     public void OnTriggerEnter2D(Collider2D other)

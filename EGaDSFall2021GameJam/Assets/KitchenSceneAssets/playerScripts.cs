@@ -71,7 +71,10 @@ public class playerScripts : MonoBehaviour
             horizontal = 0;
             vertical = 0;
         }
-        
+        if (sceneName == "WinScene" || sceneName == "Gameover" || sceneName == "MainMenu")
+        {
+            Destroy(gameObject);
+        }
     }
 
     void FixedUpdate()
@@ -138,6 +141,6 @@ public class playerScripts : MonoBehaviour
 
     public void resetPosition()
     {
-        gameObject.transform.position = new Vector3(5 , 0, 0);
+        gameObject.transform.position = new Vector3(-5 , 0, 0);
     }
 }
