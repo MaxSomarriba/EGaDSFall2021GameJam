@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PaperStack_Script : MonoBehaviour
 {
+    private static PaperStack_Script playerInstance;
 
     public static int stackSize = 10;
     public float TimeSeconds = 5;
@@ -31,5 +32,14 @@ public class PaperStack_Script : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+
+        if (playerInstance == null)
+        {
+            playerInstance = this;
+        }
+        else
+        {
+            Object.Destroy(gameObject);
+        }
     }
 }
