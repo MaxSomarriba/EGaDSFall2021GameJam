@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class paitenceManagerScript : MonoBehaviour
 {
     public int totalPaitence;
     private static paitenceManagerScript paitenceManagerInstance;
+    public Text txt;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +31,11 @@ public class paitenceManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(totalPaitence <= 0)
+        txt.text = totalPaitence.ToString();
+        if (totalPaitence <= 0)
         {
-            Debug.Log("YOU LOSE");
+            SceneManager.LoadScene(sceneName: "Gameover");
+            DestroyObject(gameObject);
         }
     }
     public void losePaitence(int amountOfPaitence)

@@ -68,6 +68,10 @@ public class kitchenScript : MonoBehaviour
             _boxCollider2D.enabled = false;
             spriteRenderer.enabled = false;
         }
+        if (sceneName == "WinScene" || sceneName == "Gameover" || sceneName == "MainMenu")
+        {
+            Destroy(gameObject);
+        }
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
