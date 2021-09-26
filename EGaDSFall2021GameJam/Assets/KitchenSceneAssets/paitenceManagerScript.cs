@@ -72,4 +72,9 @@ public class paitenceManagerScript : MonoBehaviour
     {
         totalPaitence -= amountOfPaitence;
     }
+
+    public void gameRestart()
+    {
+        totalPaitence = 100;
+    }
 }

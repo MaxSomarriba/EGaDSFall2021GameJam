@@ -6,11 +6,16 @@ public class MainMenu_Script : MonoBehaviour
 {
     public GameObject MainMenu;
     public GameObject CreditsMenu;
+    private GameObject paitenceManagerUsedForReference;
+    private GameObject paperStackUsedForReference;
 
     // Start is called before the first frame update
     void Start()
     {
+        paitenceManagerUsedForReference = GameObject.Find("PaitenceManager");
+        paperStackUsedForReference = GameObject.Find("PaperStack");
         MainMenuButton();
+
     }
 
     public void PlayNowButton()
@@ -19,6 +24,8 @@ public class MainMenu_Script : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("OfficeScene");
         UnityEngine.SceneManagement.SceneManager.LoadScene("restaurantScene");
         UnityEngine.SceneManagement.SceneManager.LoadScene("TransitionScene");
+        paitenceManagerUsedForReference.GetComponent<paitenceManagerScript>().gameRestart();
+        paperStackUsedForReference.GetComponent<PaperStack_Script>().gameRestart();
     }
 
     public void CreditsButton()

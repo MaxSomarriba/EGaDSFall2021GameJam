@@ -51,4 +51,8 @@ public class PaperStack_Script : MonoBehaviour
             Object.Destroy(gameObject);
         }
     }
+    public void gameRestart()
+    {
+        stackSize = 10;
+    }
 }
