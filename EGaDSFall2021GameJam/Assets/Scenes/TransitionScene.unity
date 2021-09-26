@@ -742,6 +742,7 @@ GameObject:
   - component: {fileID: 1844926025}
   - component: {fileID: 1844926028}
   - component: {fileID: 1844926029}
+  - component: {fileID: 1844926030}
   m_Layer: 0
   m_Name: KitchenEntrance
   m_TagString: Untagged
@@ -899,3 +900,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.758042, y: 3.749775}
   m_EdgeRadius: 0
+--- !u!114 &1844926030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844926023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728449306c70f754fab7207017885335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
