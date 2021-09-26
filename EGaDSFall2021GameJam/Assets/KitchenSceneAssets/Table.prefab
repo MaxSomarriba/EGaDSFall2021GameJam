@@ -127,7 +127,10 @@ MonoBehaviour:
   order: 0
   timeBeforeLosingPaitenceAfterOrdering: 10
   timeBeforeLosingMorePaitence: 2
+  timeToEatFood: 6
   paitenceLost: 3
+  spriteRenderer: {fileID: 0}
+  _boxCollider2D: {fileID: 0}
   TableState: 0
 --- !u!61 &7446614791965316028
 BoxCollider2D:
