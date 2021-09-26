@@ -12,6 +12,7 @@ public class tableScript : MonoBehaviour
     private GameObject paitenceManagerScriptsUsedForLosingPaitence;
     private holding whatIsPlayerHolding;
     public int timeBeforeLosingPaitenceAfterSittingDown;
+    private int intialTimeBeforeLosingPaitenceAfterSittingDown;
     public int timeBeforeLosingMorePaitence;
     public int timeToEatFood;
     public int paitenceLost;
@@ -19,6 +20,7 @@ public class tableScript : MonoBehaviour
     public BoxCollider2D _boxCollider2D;
     private AudioSource source;
     private static tableScript tableInstance;
+
 
     public enum food
     {
@@ -36,6 +38,7 @@ public class tableScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        intialTimeBeforeLosingPaitenceAfterSittingDown = timeBeforeLosingPaitenceAfterSittingDown;
         _boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
         playerScriptsUsedForFoodReference = GameObject.Find("Player");
         paitenceManagerScriptsUsedForLosingPaitence = GameObject.Find("PaitenceManager");
@@ -100,16 +103,17 @@ public class tableScript : MonoBehaviour
     }
     IEnumerator ExecuteAfterTime(float time)
     {
-        yield return new WaitForSeconds(time);
+            yield return new WaitForSeconds(time);
 
-        paitenceManagerScriptsUsedForLosingPaitence.GetComponent<paitenceManagerScript>().losePaitence(paitenceLost);
-        
-        StartCoroutine(ExecuteAfterTime(timeBeforeLosingMorePaitence));
+            paitenceManagerScriptsUsedForLosingPaitence.GetComponent<paitenceManagerScript>().losePaitence(paitenceLost);
+            StartCoroutine(ExecuteAfterTime(timeBeforeLosingMorePaitence));
+           
     }
     IEnumerator EatFoodExecuteAfterTime(float time)
     {
+        timeBeforeLosingPaitenceAfterSittingDown = intialTimeBeforeLosingPaitenceAfterSittingDown;
         yield return new WaitForSeconds(time);
-
+        
         TableState = tableState.Ordering;
         DecideOrder();
     }
@@ -148,8 +152,10 @@ public class tableScript : MonoBehaviour
 
     public void DecideOrder()
     {
+        
         StartCoroutine(ExecuteAfterTime(timeBeforeLosingPaitenceAfterSittingDown)); //start countdown
         order = GetRandomEnum<food>();
+        
     }
     static T GetRandomEnum<T>()
     {
@@ -159,8 +165,10 @@ public class tableScript : MonoBehaviour
     }
     public void TakeFood()
     {
+        StopAllCoroutines();
         playerScriptsUsedForFoodReference.GetComponent<playerScripts>().resetHolding();
         EatFood();
+        
     }
     public void EatFood()
     {

@@ -22,7 +22,7 @@ public class Return_Script : MonoBehaviour
     }
 
     public void checkClick() {
-        SceneManager.LoadScene(sceneName: "TransitionScene");
+        SceneManager.LoadScene(sceneName: "TransitionSceneComingFromOffice");
         // isClicked = true;
     }
 }

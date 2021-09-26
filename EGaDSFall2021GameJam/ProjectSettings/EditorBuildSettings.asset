@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: 6488428738ea8ae42b897b927cd0bfb3
+  - enabled: 1
+    path: Assets/Scenes/TransitionSceneComingFromKitchen.unity
+    guid: cab1c40d2b5810e46ac6f697771dc79f
+  - enabled: 1
+    path: Assets/Scenes/TransitionSceneComingFromOffice.unity
+    guid: 8cf8673bbcc705149821dcdfe0630d23
   m_configObjects: {}

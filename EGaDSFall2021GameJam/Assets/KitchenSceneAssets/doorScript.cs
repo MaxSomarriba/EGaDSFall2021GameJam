@@ -20,7 +20,7 @@ public class doorScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(sceneName: "TransitionScene");
+            SceneManager.LoadScene(sceneName: "TransitionSceneComingFromKitchen");
         }
     }
 }
