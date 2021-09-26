@@ -9,12 +9,12 @@ public class PaperStackUI_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stackSizeText.text = PaperStack_Script.stackSize.ToString();
+        stackSizeText.text = PaperStack_Script.stackSize.ToString() + "/30";
     }
 
     // Update is called once per frame
     void Update()
     {
-        stackSizeText.text = PaperStack_Script.stackSize.ToString();
+        stackSizeText.text = PaperStack_Script.stackSize.ToString() + "/30";
     }
 }
