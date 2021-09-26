@@ -6,6 +6,7 @@ using UnityEngine;
 public class paitenceManagerScript : MonoBehaviour
 {
     public int totalPaitence;
+    private static paitenceManagerScript paitenceManagerInstance;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,15 @@ public class paitenceManagerScript : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+
+        if (paitenceManagerInstance == null)
+        {
+            paitenceManagerInstance = this;
+        }
+        else
+        {
+            DestroyObject(gameObject);
+        }
     }
 
     // Update is called once per frame

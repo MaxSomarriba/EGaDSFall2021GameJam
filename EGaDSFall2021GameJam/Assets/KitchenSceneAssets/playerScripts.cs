@@ -29,15 +29,27 @@ public class playerScripts : MonoBehaviour
     public int pizza = 0;
     public int burger = 0;
     public int salad = 0;
+
+    private static playerScripts playerInstance;
+    public BoxCollider2D _boxCollider2D;
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-
+        _boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+
+        if (playerInstance == null)
+        {
+            playerInstance = this;
+        }
+        else
+        {
+            DestroyObject(gameObject);
+        }
     }
 
     void Update()
@@ -51,10 +63,7 @@ public class playerScripts : MonoBehaviour
             horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
             vertical = Input.GetAxisRaw("Vertical"); // -1 is down
 
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                SceneManager.LoadScene(sceneName: "OfficeScene");
-            }
+
         }
         else
         {
@@ -125,5 +134,10 @@ public class playerScripts : MonoBehaviour
     public void pickUpSalad()
     {
         isHolding = holding.Salad;
+    }
+
+    public void resetPosition()
+    {
+        gameObject.transform.position = new Vector3(5 , 0, 0);
     }
 }

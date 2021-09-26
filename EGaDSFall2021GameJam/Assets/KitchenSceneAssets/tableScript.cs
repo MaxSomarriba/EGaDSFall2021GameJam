@@ -18,6 +18,8 @@ public class tableScript : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public BoxCollider2D _boxCollider2D;
 
+    private static tableScript tableInstance;
+
     public enum food
     {
         Pizza,
@@ -45,6 +47,15 @@ public class tableScript : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+
+        if (tableInstance == null)
+        {
+            tableInstance = this;
+        }
+        else
+        {
+            DestroyObject(gameObject);
+        }
     }
     // Update is called once per frame
     void Update()

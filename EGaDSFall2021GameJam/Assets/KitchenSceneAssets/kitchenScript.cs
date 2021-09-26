@@ -20,6 +20,9 @@ public class kitchenScript : MonoBehaviour
     private GameObject playerScriptsUsedForFoodReference;
     public SpriteRenderer spriteRenderer;
     public BoxCollider2D _boxCollider2D;
+
+    private static kitchenScript kitchenInstance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +35,17 @@ public class kitchenScript : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+
+        if (kitchenInstance == null)
+        {
+            kitchenInstance = this;
+        }
+        else
+        {
+            DestroyObject(gameObject);
+        }
     }
+
 
     // Update is called once per frame
     void Update()

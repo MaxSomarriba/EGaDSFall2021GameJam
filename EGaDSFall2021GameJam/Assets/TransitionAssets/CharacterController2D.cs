@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
 
+
+
 public class CharacterController2D : MonoBehaviour
 {
     // Move player in 2D space
@@ -21,9 +23,13 @@ public class CharacterController2D : MonoBehaviour
     CapsuleCollider2D mainCollider;
     Transform t;
 
+    
+
     // Use this for initialization
     void Start()
     {
+        
+
         t = transform;
         r2d = GetComponent<Rigidbody2D>();
         mainCollider = GetComponent<CapsuleCollider2D>();
