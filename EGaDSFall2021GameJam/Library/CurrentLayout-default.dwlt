@@ -15,19 +15,11 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 42.666668
-    width: 1280
-    height: 637.3334
+    y: 42.285717
+    width: 1714.2858
+    height: 1052.5715
   m_ShowMode: 4
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_Title: Project
-=======
-  m_Title: Hierarchy
->>>>>>> ethan
-=======
   m_Title: Game
->>>>>>> origin/RestaurantBranch
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -51,25 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-<<<<<<< HEAD
-    width: 1280
-    height: 587.3334
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+    width: 1714
+    height: 1003
+  m_MinSize: {x: 680, y: 492}
+  m_MaxSize: {x: 14003, y: 14042}
   vertical: 0
-<<<<<<< HEAD
-  controlID: 43
-=======
-    width: 1714.2858
-    height: 1002.57153
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
-  vertical: 0
-  controlID: 124
->>>>>>> ethan
-=======
-  controlID: 15
->>>>>>> origin/RestaurantBranch
+  controlID: 86
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -85,29 +64,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 872
+    x: 1367
     y: 0
-    width: 408
-    height: 587
-=======
-    x: 1168
-    y: 0
-    width: 546.28577
-    height: 1002.57153
->>>>>>> ethan
-=======
-    x: 978
-    y: 0
-    width: 302
-    height: 587.3334
->>>>>>> origin/RestaurantBranch
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+    width: 347
+    height: 1003
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 13}
+  - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &4
@@ -127,23 +92,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 318
-    height: 308
-=======
-    width: 426.2857
-    height: 525.7143
->>>>>>> ethan
-=======
-    width: 242
-    height: 310
->>>>>>> origin/RestaurantBranch
+    width: 338
+    height: 606
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 14}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
@@ -156,35 +111,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    y: 308
-    width: 872
-    height: 279
-=======
-    y: 525.7143
-    width: 1168
-    height: 476.85724
->>>>>>> ethan
-=======
-    y: 310
-    width: 978
-    height: 277.33337
->>>>>>> origin/RestaurantBranch
+    y: 606
+    width: 1367
+    height: 397
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 13}
   m_Panes:
-  - {fileID: 12}
-  - {fileID: 17}
+  - {fileID: 13}
+  - {fileID: 18}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -205,20 +148,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 1280
-<<<<<<< HEAD
-    height: 637
-  m_MinSize: {x: 875, y: 542}
-=======
-    width: 1714.2858
-    height: 1052.5715
+    width: 1714
+    height: 1053
   m_MinSize: {x: 875, y: 300}
->>>>>>> ethan
-=======
-    height: 637.3334
-  m_MinSize: {x: 875, y: 300}
->>>>>>> origin/RestaurantBranch
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -241,13 +173,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1280
+    width: 1714
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-  - {fileID: 18}
-  m_MainToolbar: {fileID: 18}
+  - {fileID: 19}
+  m_MainToolbar: {fileID: 19}
   m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
@@ -265,17 +197,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    y: 617
-=======
-    y: 617.3334
->>>>>>> origin/RestaurantBranch
-    width: 1280
-=======
-    y: 1032.5715
-    width: 1714.2858
->>>>>>> ethan
+    y: 1033
+    width: 1714
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -298,30 +221,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 872
-    height: 587
+    width: 1367
+    height: 1003
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 44
-=======
-    width: 1168
-    height: 1002.57153
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
-  vertical: 1
-  controlID: 83
->>>>>>> ethan
-=======
-    width: 978
-    height: 587.3334
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
-  vertical: 1
-  controlID: 16
->>>>>>> origin/RestaurantBranch
+  controlID: 87
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -341,30 +246,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 872
-    height: 308
+    width: 1367
+    height: 606
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 89
-=======
-    width: 1168
-    height: 525.7143
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
-  vertical: 0
-  controlID: 17
->>>>>>> ethan
-=======
-    width: 978
-    height: 310
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
-  vertical: 0
-  controlID: 17
->>>>>>> origin/RestaurantBranch
+  controlID: 88
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -375,37 +262,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 318
+    x: 338
     y: 0
-    width: 554
-    height: 308
-=======
-    x: 426.2857
-    y: 0
-    width: 741.7143
-    height: 525.7143
->>>>>>> ethan
-=======
-    x: 242
-    y: 0
-    width: 736
-    height: 310
->>>>>>> origin/RestaurantBranch
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+    width: 1029
+    height: 606
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 17}
+  - {fileID: 12}
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -414,23 +288,22 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-<<<<<<< HEAD
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95b8172b39a93e64981b6a57ccc39d67, type: 3}
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 256, y: 400}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 2048, y: 2048}
   m_TitleContent:
-    m_Text: Collaborate
-    m_Image: {fileID: 0}
+    m_Text: Asset Store
+    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1168
-    y: 72.571434
-    width: 544
-    height: 982
+    x: 468
+    y: 181
+    width: 973
+    height: 501
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
@@ -440,8 +313,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-=======
->>>>>>> origin/RestaurantBranch
   m_EditorHideFlags: 1
   m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -455,21 +326,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    y: 380.6667
-    width: 871
-    height: 258
-=======
-    y: 598.28577
-    width: 1167
-    height: 455.85724
->>>>>>> ethan
-=======
-    y: 382.6667
-    width: 977
-    height: 256.33337
->>>>>>> origin/RestaurantBranch
+    y: 678.28577
+    width: 1366
+    height: 376
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -484,45 +343,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-<<<<<<< HEAD
-    - Assets/KitchenSceneAssets
-=======
-    - Assets/MainMenuAssets
->>>>>>> ethan
+    - Assets/Scenes
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-<<<<<<< HEAD
-  - Assets/KitchenSceneAssets
-<<<<<<< HEAD
-=======
-  - Assets/MainMenuAssets
->>>>>>> ethan
-  m_LastFoldersGridSize: 96
-=======
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
->>>>>>> origin/RestaurantBranch
-  m_LastProjectPath: C:\Users\maxms\Documents\GitHub\NewEGaDSFall2021GameJam\EGaDSFall2021GameJam
+  m_LastProjectPath: C:\repos\EGaDSFall2021GameJam\EGaDSFall2021GameJam
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_SelectedIDs: 323d0000
-    m_LastClickedID: 15666
-    m_ExpandedIDs: 000000002e3d000000ca9a3b
-=======
-    m_SelectedIDs: 4e5e0000
-    m_LastClickedID: 24142
-    m_ExpandedIDs: 00000000763d000000ca9a3b
->>>>>>> ethan
-=======
-    m_SelectedIDs: 303d0000
-    m_LastClickedID: 15664
-    m_ExpandedIDs: 000000002c3d000000ca9a3b
->>>>>>> origin/RestaurantBranch
+    m_SelectedIDs: fa560000
+    m_LastClickedID: 22266
+    m_ExpandedIDs: 00000000f056000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -550,15 +385,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_ExpandedIDs: 000000002e3d0000
-=======
-    m_ExpandedIDs: 00000000763d0000
->>>>>>> ethan
-=======
-    m_ExpandedIDs: 000000002c3d0000
->>>>>>> origin/RestaurantBranch
+    m_ExpandedIDs: 00000000f0560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -586,15 +413,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_ExpandedInstanceIDs: c6230000c03e00001e560000000000009e4a0000
-=======
-    m_ExpandedInstanceIDs: c6230000c03e00001e5600009e4a000000000000
->>>>>>> ethan
-=======
     m_ExpandedInstanceIDs: c6230000
->>>>>>> origin/RestaurantBranch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -610,7 +429,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -621,8 +440,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 207
---- !u!114 &13
+  m_DirectoriesAreaWidth: 115
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -642,24 +461,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 872
-    y: 72.66667
-    width: 407
-    height: 566
-=======
-    x: 1168
+    x: 1366.8572
     y: 72.571434
-    width: 545.28577
-    height: 981.57153
->>>>>>> ethan
-=======
-    x: 978
-    y: 72.66667
-    width: 301
-    height: 566.3334
->>>>>>> origin/RestaurantBranch
+    width: 345
+    height: 982
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -674,7 +479,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -695,50 +500,27 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 72.66667
-<<<<<<< HEAD
-    width: 317
-    height: 287
-=======
     y: 72.571434
-    width: 425.2857
-    height: 504.7143
->>>>>>> ethan
-=======
-    width: 241
-    height: 289
->>>>>>> origin/RestaurantBranch
+    width: 337
+    height: 585
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      m_SelectedIDs: bc380000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 
-=======
-      m_SelectedIDs: 86d0ffff
-      m_LastClickedID: -12154
-      m_ExpandedIDs: 3ecdffff40cdffffd6d2ffff56d5ffff68d5ffff26d6ffffbcedffff10eeffff64f2ffffb2f2ffffdcf2ffffd8f6ffffe4f7ffff7afaffff5afbffffba530000
->>>>>>> ethan
-=======
-      m_SelectedIDs: 525f0000
-      m_LastClickedID: 24402
-      m_ExpandedIDs: 96dfffffb4dfffff08f5ffff20f5ffff74f6ffff88f6ffff9af6ffffacf6ffff4ef8ffff98f8fffff2f9ffffa6faffff5afbfffff4ffffffba4b0000
->>>>>>> origin/RestaurantBranch
+      m_ExpandedIDs: 40cdffffb8cdffff9aceffff20570000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: QuitButton
-        m_OriginalName: QuitButton
+        m_Name: PaperStackText
+        m_OriginalName: PaperStackText
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -12154
+        m_UserData: 22402
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -750,8 +532,8 @@ MonoBehaviour:
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
-  m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &15
+  m_WindowGUID: a6f25ff9b80af714a821d28f3e6c69e9
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -771,27 +553,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 318
-    y: 72.66667
-    width: 552
-    height: 287
-=======
-    x: 426.28574
+    x: 338.28574
     y: 72.571434
-    width: 739.7143
-    height: 504.7143
->>>>>>> ethan
-=======
-    x: 242
-    y: 72.66667
-    width: 734
-    height: 289
->>>>>>> origin/RestaurantBranch
+    width: 1027
+    height: 585
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
-  m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
+  m_WindowGUID: cb9e48fc7f6ad7b4b800a1ab07d93cde
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
@@ -801,21 +569,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_Target: {x: 2.8199997, y: -2.18, z: 0}
+    m_Target: {x: 766, y: 361.31274, z: 0}
     speed: 2
-    m_Value: {x: 2.8199997, y: -2.18, z: 0}
-=======
-    m_Target: {x: 931.5, y: 395, z: 0}
-    speed: 2
-    m_Value: {x: 931.5, y: 395, z: 0}
->>>>>>> ethan
-=======
-    m_Target: {x: 0, y: 0, z: -10}
-    speed: 2
-    m_Value: {x: 0, y: 0, z: -10}
->>>>>>> origin/RestaurantBranch
+    m_Value: {x: 766, y: 361.31274, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -849,7 +605,7 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 1, y: 1}
+      m_Size: {x: 0, y: 0}
     zGrid:
       m_Fade:
         m_Target: 1
@@ -866,21 +622,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_Target: 2.1213202
+    m_Target: 867.7355
     speed: 2
-    m_Value: 2.1213202
-=======
-    m_Target: 450.87387
-    speed: 2
-    m_Value: 450.87387
->>>>>>> ethan
-=======
-    m_Target: 12.124355
-    speed: 2
-    m_Value: 12.124355
->>>>>>> origin/RestaurantBranch
+    m_Value: 867.7355
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -905,7 +649,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -925,24 +669,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 318
-    y: 72.66667
-    width: 552
-    height: 287
-=======
-    x: 426.28574
+    x: 338.28574
     y: 72.571434
-    width: 739.7143
-    height: 504.7143
->>>>>>> ethan
-=======
-    x: 242
-    y: 72.66667
-    width: 734
-    height: 289
->>>>>>> origin/RestaurantBranch
+    width: 1027
+    height: 585
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -965,10 +695,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -640
-    m_HBaseRangeMax: 640
-    m_VBaseRangeMin: -360
-    m_VBaseRangeMax: 360
+    m_HBaseRangeMin: -548.5715
+    m_HBaseRangeMax: 548.5715
+    m_VBaseRangeMin: -308.57144
+    m_VBaseRangeMax: 308.57144
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -977,7 +707,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -986,62 +716,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-<<<<<<< HEAD
-<<<<<<< HEAD
-      width: 552
-      height: 266
-    m_Scale: {x: 0.36944443, y: 0.36944443}
-    m_Translation: {x: 276, y: 133}
-=======
-      width: 739.7143
-      height: 483.7143
-    m_Scale: {x: 0.6742187, y: 0.6742187}
-    m_Translation: {x: 369.85715, y: 241.85713}
->>>>>>> ethan
-=======
-      width: 734
-      height: 268
-    m_Scale: {x: 0.37222221, y: 0.37222221}
-    m_Translation: {x: 367, y: 134}
->>>>>>> origin/RestaurantBranch
+      width: 1027
+      height: 564
+    m_Scale: {x: 0.9138889, y: 0.9138889}
+    m_Translation: {x: 513.5, y: 282}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-      x: -747.0677
-=======
-      x: -985.97015
->>>>>>> origin/RestaurantBranch
-      y: -360
-      width: 1971.9403
-      height: 720
+      x: -561.8845
+      y: -308.57144
+      width: 1123.769
+      height: 617.1429
     m_MinimalGUI: 1
-<<<<<<< HEAD
-  m_defaultScale: 0.36944443
-  m_LastWindowPixelSize: {x: 828, y: 430.5}
-=======
-      x: -548.5715
-      y: -358.72208
-      width: 1097.143
-      height: 717.44415
-    m_MinimalGUI: 1
-  m_defaultScale: 0.6742187
-  m_LastWindowPixelSize: {x: 1294.5, y: 883.25}
->>>>>>> ethan
-=======
-  m_defaultScale: 0.37222221
-  m_LastWindowPixelSize: {x: 1101, y: 433.5}
->>>>>>> origin/RestaurantBranch
+  m_defaultScale: 0.9138889
+  m_LastWindowPixelSize: {x: 1797.25, y: 1023.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_LowResolutionForAspectRatios: 00000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1061,25 +758,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 0
-<<<<<<< HEAD
-    y: 380.6667
-    width: 871
-    height: 258
-=======
-    y: 598.28577
-    width: 1167
-    height: 455.85724
->>>>>>> ethan
-=======
-    x: 7.3333335
-    y: 382
-    width: 965
-    height: 250
->>>>>>> origin/RestaurantBranch
+    x: 8
+    y: 718
+    width: 1366
+    height: 308
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
