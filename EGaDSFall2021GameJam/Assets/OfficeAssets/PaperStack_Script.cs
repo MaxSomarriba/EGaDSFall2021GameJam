@@ -27,4 +27,9 @@ public class PaperStack_Script : MonoBehaviour
             stackSize++;
         }
     }
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 }

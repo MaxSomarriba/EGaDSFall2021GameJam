@@ -19,7 +19,11 @@ MonoBehaviour:
     width: 1280
     height: 637.3334
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Project
+=======
+  m_Title: Hierarchy
+>>>>>>> ethan
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,12 +47,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1280
     height: 587
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 43
+=======
+    width: 1714.2858
+    height: 1002.57153
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 124
+>>>>>>> ethan
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,10 +77,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 872
     y: 0
     width: 408
     height: 587
+=======
+    x: 1168
+    y: 0
+    width: 546.28577
+    height: 1002.57153
+>>>>>>> ethan
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -93,8 +113,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 318
     height: 308
+=======
+    width: 426.2857
+    height: 525.7143
+>>>>>>> ethan
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -118,9 +143,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 308
     width: 872
     height: 279
+=======
+    y: 525.7143
+    width: 1168
+    height: 476.85724
+>>>>>>> ethan
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 13}
@@ -149,9 +180,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1280
     height: 637
   m_MinSize: {x: 875, y: 542}
+=======
+    width: 1714.2858
+    height: 1052.5715
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> ethan
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -198,8 +235,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 617
     width: 1280
+=======
+    y: 1032.5715
+    width: 1714.2858
+>>>>>>> ethan
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -222,12 +264,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 872
     height: 587
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 44
+=======
+    width: 1168
+    height: 1002.57153
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 83
+>>>>>>> ethan
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,12 +298,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 872
     height: 308
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 89
+=======
+    width: 1168
+    height: 525.7143
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 17
+>>>>>>> ethan
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,10 +328,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 318
     y: 0
     width: 554
     height: 308
+=======
+    x: 426.2857
+    y: 0
+    width: 741.7143
+    height: 525.7143
+>>>>>>> ethan
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
@@ -300,10 +367,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 996
-    y: 80
-    width: 275.6667
-    height: 551.6667
+    x: 1168
+    y: 72.571434
+    width: 544
+    height: 982
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
@@ -326,9 +393,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 380.6667
     width: 871
     height: 258
+=======
+    y: 598.28577
+    width: 1167
+    height: 455.85724
+>>>>>>> ethan
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -343,21 +416,35 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/KitchenSceneAssets
+=======
+    - Assets/MainMenuAssets
+>>>>>>> ethan
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/KitchenSceneAssets
+=======
+  - Assets/MainMenuAssets
+>>>>>>> ethan
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\maxms\Documents\GitHub\NewEGaDSFall2021GameJam\EGaDSFall2021GameJam
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 323d0000
     m_LastClickedID: 15666
     m_ExpandedIDs: 000000002e3d000000ca9a3b
+=======
+    m_SelectedIDs: 4e5e0000
+    m_LastClickedID: 24142
+    m_ExpandedIDs: 00000000763d000000ca9a3b
+>>>>>>> ethan
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -385,7 +472,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000002e3d0000
+=======
+    m_ExpandedIDs: 00000000763d0000
+>>>>>>> ethan
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -413,7 +504,11 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
+<<<<<<< HEAD
     m_ExpandedInstanceIDs: c6230000c03e00001e560000000000009e4a0000
+=======
+    m_ExpandedInstanceIDs: c6230000c03e00001e5600009e4a000000000000
+>>>>>>> ethan
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -461,10 +556,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 872
     y: 72.66667
     width: 407
     height: 566
+=======
+    x: 1168
+    y: 72.571434
+    width: 545.28577
+    height: 981.57153
+>>>>>>> ethan
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -500,30 +602,42 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 72.66667
     width: 317
     height: 287
+=======
+    y: 72.571434
+    width: 425.2857
+    height: 504.7143
+>>>>>>> ethan
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: bc380000
       m_LastClickedID: 0
       m_ExpandedIDs: 
+=======
+      m_SelectedIDs: 86d0ffff
+      m_LastClickedID: -12154
+      m_ExpandedIDs: 3ecdffff40cdffffd6d2ffff56d5ffff68d5ffff26d6ffffbcedffff10eeffff64f2ffffb2f2ffffdcf2ffffd8f6ffffe4f7ffff7afaffff5afbffffba530000
+>>>>>>> ethan
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: QuitButton
+        m_OriginalName: QuitButton
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -12154
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -553,10 +667,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 318
     y: 72.66667
     width: 552
     height: 287
+=======
+    x: 426.28574
+    y: 72.571434
+    width: 739.7143
+    height: 504.7143
+>>>>>>> ethan
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -569,9 +690,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 2.8199997, y: -2.18, z: 0}
     speed: 2
     m_Value: {x: 2.8199997, y: -2.18, z: 0}
+=======
+    m_Target: {x: 931.5, y: 395, z: 0}
+    speed: 2
+    m_Value: {x: 931.5, y: 395, z: 0}
+>>>>>>> ethan
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -622,9 +749,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 2.1213202
     speed: 2
     m_Value: 2.1213202
+=======
+    m_Target: 450.87387
+    speed: 2
+    m_Value: 450.87387
+>>>>>>> ethan
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -669,10 +802,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 318
     y: 72.66667
     width: 552
     height: 287
+=======
+    x: 426.28574
+    y: 72.571434
+    width: 739.7143
+    height: 504.7143
+>>>>>>> ethan
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -707,7 +847,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -716,16 +856,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
       width: 552
       height: 266
     m_Scale: {x: 0.36944443, y: 0.36944443}
     m_Translation: {x: 276, y: 133}
+=======
+      width: 739.7143
+      height: 483.7143
+    m_Scale: {x: 0.6742187, y: 0.6742187}
+    m_Translation: {x: 369.85715, y: 241.85713}
+>>>>>>> ethan
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -747.0677
       y: -360
       width: 1494.1354
@@ -733,6 +881,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.36944443
   m_LastWindowPixelSize: {x: 828, y: 430.5}
+=======
+      x: -548.5715
+      y: -358.72208
+      width: 1097.143
+      height: 717.44415
+    m_MinimalGUI: 1
+  m_defaultScale: 0.6742187
+  m_LastWindowPixelSize: {x: 1294.5, y: 883.25}
+>>>>>>> ethan
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -759,9 +916,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 380.6667
     width: 871
     height: 258
+=======
+    y: 598.28577
+    width: 1167
+    height: 455.85724
+>>>>>>> ethan
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &19
 MonoBehaviour:
