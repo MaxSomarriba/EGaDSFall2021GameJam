@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Return_Script : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Return_Script : MonoBehaviour
     }
 
     public void checkClick() {
-        isClicked = true;
+        SceneManager.LoadScene(sceneName: "TransitionScene");
+        // isClicked = true;
     }
 }

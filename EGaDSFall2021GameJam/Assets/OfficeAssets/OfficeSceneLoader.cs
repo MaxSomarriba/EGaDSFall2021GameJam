@@ -17,9 +17,9 @@ public class OfficeSceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Return_Script.isClicked) {
-            StartCoroutine(LoadYourAsyncScene());
-        }
+        // if (Return_Script.isClicked) {
+        //     StartCoroutine(LoadYourAsyncScene());
+        // }
     }
 
      IEnumerator LoadYourAsyncScene()
