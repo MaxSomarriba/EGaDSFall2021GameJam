@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PaperStack_Script : MonoBehaviour
 {
@@ -19,13 +20,21 @@ public class PaperStack_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Scene scene = SceneManager.GetActiveScene();
+        string sceneName = scene.name;
+        if (sceneName == "WinScene" || sceneName == "Gameover" || sceneName == "MainMenu") {
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator SpawnTimer() {
         while (true) {
             yield return new WaitForSeconds(TimeSeconds);
             stackSize++;
+            if (stackSize > 30) {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Gameover");
+                Destroy(gameObject);
+            }
         }
     }
 
