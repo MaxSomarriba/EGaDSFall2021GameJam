@@ -1,27 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pizzaScript : MonoBehaviour
 {
     [SerializeField] private bool triggerActive = false;
     private GameObject playerScriptsUsedForFoodReference;
     private holding whatIsPlayerHolding;
+    public SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
         playerScriptsUsedForFoodReference = GameObject.Find("Player");
+    }
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
         whatIsPlayerHolding = playerScriptsUsedForFoodReference.GetComponent<playerScripts>().getCurrentHolding();
-        //For trigger
-        if (triggerActive && Input.GetKeyDown(KeyCode.Space) && whatIsPlayerHolding == holding.Nothing)
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "restaurantScene")
         {
-            //Debug.Log(playerScriptsUsedForFoodReference.GetComponent<playerScripts>().getCurrentHolding().GetType());
-            pizzaPickUp();
+            spriteRenderer.enabled = true;
+            //For trigger
+            if (triggerActive && Input.GetKeyDown(KeyCode.Space) && whatIsPlayerHolding == holding.Nothing)
+            {
+                //Debug.Log(playerScriptsUsedForFoodReference.GetComponent<playerScripts>().getCurrentHolding().GetType());
+                pizzaPickUp();
+            }
+        }
+        else
+        {
+            spriteRenderer.enabled = false;
         }
 
     }

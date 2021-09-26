@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class kitchenScript : MonoBehaviour
 {
@@ -17,23 +18,43 @@ public class kitchenScript : MonoBehaviour
     public GameObject burgerPrefab;
     public GameObject saladPrefab;
     private GameObject playerScriptsUsedForFoodReference;
+    public SpriteRenderer spriteRenderer;
+    public BoxCollider2D _boxCollider2D;
     // Start is called before the first frame update
     void Start()
     {
         initialFoodCreationYOffset = foodCreationYOffset;
         playerScriptsUsedForFoodReference = GameObject.Find("Player");
+
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        _boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
+    }
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //For trigger
-        if (triggerActive && Input.GetKeyDown(KeyCode.Space))
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "restaurantScene")
         {
-            putOrdersIn();
-            StartCoroutine(ExecuteAfterTime(cookingTime));
+            _boxCollider2D.enabled = true;
+            spriteRenderer.enabled = true;
+            //For trigger
+            if (triggerActive && Input.GetKeyDown(KeyCode.Space))
+            {
+                putOrdersIn();
+                StartCoroutine(ExecuteAfterTime(cookingTime));
+            }
         }
-
+        else
+        {
+            _boxCollider2D.enabled = false;
+            spriteRenderer.enabled = false;
+        }
     }
     public void OnTriggerEnter2D(Collider2D other)
     {

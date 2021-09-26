@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class tableScript : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class tableScript : MonoBehaviour
     private holding whatIsPlayerHolding;
     public int timeBeforeLosingPaitenceAfterOrdering;
     public int timeBeforeLosingMorePaitence;
+    public int timeToEatFood;
     public int paitenceLost;
+    public SpriteRenderer spriteRenderer;
+    public BoxCollider2D _boxCollider2D;
 
     public enum food
     {
@@ -20,7 +24,7 @@ public class tableScript : MonoBehaviour
         Burger,
         Salad
     }
-    public enum tableState{
+    public enum tableState {
         Ordering,
         Waiting,
         Eating
@@ -30,35 +34,53 @@ public class tableScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
         playerScriptsUsedForFoodReference = GameObject.Find("Player");
         paitenceManagerScriptsUsedForLosingPaitence = GameObject.Find("PaitenceManager");
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         DecideOrder();
-    }
 
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     // Update is called once per frame
     void Update()
     {
-        if(TableState == tableState.Ordering){
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (TableState == tableState.Ordering) {
             m_SpriteRenderer.color = Color.blue;
         }
-        if (TableState == tableState.Waiting){
+        if (TableState == tableState.Waiting) {
             m_SpriteRenderer.color = Color.red;
         }
-        if (TableState == tableState.Eating){
+        if (TableState == tableState.Eating) {
             m_SpriteRenderer.color = Color.yellow;
         }
 
         whatIsPlayerHolding = playerScriptsUsedForFoodReference.GetComponent<playerScripts>().getCurrentHolding();
         //For trigger
-        if (triggerActive && Input.GetKeyDown(KeyCode.Space) && TableState == tableState.Ordering)
+        if (sceneName == "restaurantScene")
         {
-            TakeOrder();
-            StartCoroutine(ExecuteAfterTime(timeBeforeLosingPaitenceAfterOrdering));
+            _boxCollider2D.enabled = true;
+            spriteRenderer.enabled = true;
+            if (triggerActive && Input.GetKeyDown(KeyCode.Space) && TableState == tableState.Ordering)
+            {
+                TakeOrder();
+                StartCoroutine(ExecuteAfterTime(timeBeforeLosingPaitenceAfterOrdering));
+            }
+            if (triggerActive && Input.GetKeyDown(KeyCode.Space) && TableState == tableState.Waiting && string.Equals(whatIsPlayerHolding.ToString(), order.ToString()))
+            {
+                TakeFood();
+            }
         }
-        if (triggerActive && Input.GetKeyDown(KeyCode.Space) && TableState == tableState.Waiting && string.Equals(whatIsPlayerHolding.ToString(), order.ToString()))
+        else
         {
-            TakeFood();
+            _boxCollider2D.enabled = false;
+            spriteRenderer.enabled = false;
         }
 
     }
@@ -72,6 +94,13 @@ public class tableScript : MonoBehaviour
             StartCoroutine(ExecuteAfterTime(timeBeforeLosingMorePaitence));
 
         }
+    }
+    IEnumerator EatFoodExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        TableState = tableState.Ordering;
+        DecideOrder();
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -90,7 +119,7 @@ public class tableScript : MonoBehaviour
     }
     public void TakeOrder()
     {
-        
+
         if (order == food.Pizza)
         {
             playerScriptsUsedForFoodReference.GetComponent<playerScripts>().addPizza();
@@ -99,13 +128,13 @@ public class tableScript : MonoBehaviour
         {
             playerScriptsUsedForFoodReference.GetComponent<playerScripts>().addBurger();
         }
-        if(order == food.Salad)
+        if (order == food.Salad)
         {
             playerScriptsUsedForFoodReference.GetComponent<playerScripts>().addSalad();
         }
         TableState = tableState.Waiting;
     }
-    
+
     public void DecideOrder()
     {
         order = GetRandomEnum<food>();
@@ -118,7 +147,12 @@ public class tableScript : MonoBehaviour
     }
     public void TakeFood()
     {
-        TableState = tableState.Eating;
         playerScriptsUsedForFoodReference.GetComponent<playerScripts>().resetHolding();
+        EatFood();
+    }
+    public void EatFood()
+    {
+        TableState = tableState.Eating;
+        StartCoroutine(EatFoodExecuteAfterTime(timeToEatFood));
     }
 }

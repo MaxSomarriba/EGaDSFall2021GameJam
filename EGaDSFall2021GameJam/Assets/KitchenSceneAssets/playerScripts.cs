@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Holding
 public enum holding
@@ -21,8 +22,8 @@ public class playerScripts : MonoBehaviour
 
     public float runSpeed = 20.0f;
 
-    
-    
+    public SpriteRenderer spriteRenderer;
+
     public holding isHolding;
     //ordering
     public int pizza = 0;
@@ -31,13 +32,37 @@ public class playerScripts : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
     {
-        // Gives a value between -1 and 1
-        horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
-        vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "restaurantScene")
+        {
+            spriteRenderer.enabled = true;
+            // Gives a value between -1 and 1
+            horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
+            vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                SceneManager.LoadScene(sceneName: "OfficeScene");
+            }
+        }
+        else
+        {
+            spriteRenderer.enabled = false;
+            horizontal = 0;
+            vertical = 0;
+        }
+        
     }
 
     void FixedUpdate()
