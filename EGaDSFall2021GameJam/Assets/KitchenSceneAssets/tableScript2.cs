@@ -17,7 +17,8 @@ public class tableScript2 : MonoBehaviour
     public int timeToEatFood;
     public int paitenceLost;
     public SpriteRenderer spriteRenderer;
-    public BoxCollider2D _boxCollider2D;
+    public CircleCollider2D _CircleCollider2D;
+    public BoxCollider2D _BoxCollider2D;
     private AudioSource source;
     private static tableScript2 tableInstance;
 
@@ -40,7 +41,8 @@ public class tableScript2 : MonoBehaviour
     void Start()
     {
         intialTimeBeforeLosingPaitenceAfterSittingDown = timeBeforeLosingPaitenceAfterSittingDown;
-        _boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
+        _BoxCollider2D = gameObject.GetComponent<BoxCollider2D>();
+        _CircleCollider2D = gameObject.GetComponent<CircleCollider2D>();
         playerScriptsUsedForFoodReference = GameObject.Find("Player");
         paitenceManagerScriptsUsedForLosingPaitence = GameObject.Find("PaitenceManager");
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
@@ -66,24 +68,14 @@ public class tableScript2 : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if (TableState == tableState.Ordering)
-        {
-            m_SpriteRenderer.color = Color.blue;
-        }
-        if (TableState == tableState.Waiting)
-        {
-            m_SpriteRenderer.color = Color.red;
-        }
-        if (TableState == tableState.Eating)
-        {
-            m_SpriteRenderer.color = Color.yellow;
-        }
+       
 
         whatIsPlayerHolding = playerScriptsUsedForFoodReference.GetComponent<playerScripts>().getCurrentHolding();
         //For trigger
         if (sceneName == "restaurantScene")
         {
-            _boxCollider2D.enabled = true;
+            _CircleCollider2D.enabled = true;
+            _BoxCollider2D.enabled = true;
             spriteRenderer.enabled = true;
             if (triggerActive && Input.GetKeyDown(KeyCode.Space) && TableState == tableState.Ordering)
             {
@@ -97,7 +89,8 @@ public class tableScript2 : MonoBehaviour
         }
         else
         {
-            _boxCollider2D.enabled = false;
+            _CircleCollider2D.enabled = false;
+            _BoxCollider2D.enabled = false;
             spriteRenderer.enabled = false;
         }
         if (sceneName == "WinScene" || sceneName == "Gameover" || sceneName == "MainMenu")

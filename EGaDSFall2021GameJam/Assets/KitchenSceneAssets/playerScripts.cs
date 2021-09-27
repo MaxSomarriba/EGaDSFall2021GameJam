@@ -14,6 +14,11 @@ public enum holding
 }
 public class playerScripts : MonoBehaviour
 {
+
+    public SpriteRenderer spriteRenderer;
+    int[] types = { 0, 1, 2 , 3, 4, 5, 6, 7, 8, 9, 10, 11};
+    int currentType = 0;
+    public Sprite[] sprites;
     Rigidbody2D body;
 
     float horizontal;
@@ -22,7 +27,6 @@ public class playerScripts : MonoBehaviour
 
     public float runSpeed = 20.0f;
 
-    public SpriteRenderer spriteRenderer;
 
     public holding isHolding;
     //ordering
@@ -54,6 +58,8 @@ public class playerScripts : MonoBehaviour
 
     void Update()
     {
+
+        spriteRenderer.sprite = sprites[currentType];
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         if (sceneName == "restaurantScene")
@@ -62,6 +68,68 @@ public class playerScripts : MonoBehaviour
             // Gives a value between -1 and 1
             horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
             vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+            if(horizontal == 0 && vertical == 0 && (pizza == 0 && burger == 0 && salad == 0) && isHolding == holding.Nothing)
+            {
+                currentType = 0;
+            }
+            if (horizontal == 0 && vertical == -1 && (pizza == 0 && burger == 0 && salad == 0) && isHolding == holding.Nothing)
+            {
+                currentType = 0;
+            }
+            if (horizontal == 0 && vertical == 1 && (pizza == 0 && burger == 0 && salad == 0) && isHolding == holding.Nothing)
+            {
+                currentType = 1;
+            }
+            if (horizontal == -1 && vertical == 0 && (pizza == 0 && burger == 0 && salad == 0) && isHolding == holding.Nothing)
+            {
+                currentType = 6;
+            }
+            if (horizontal == 1 && vertical == 0 && (pizza == 0 && burger == 0 && salad == 0) && isHolding == holding.Nothing)
+            {
+                currentType = 7;
+            }
+            //HOLDING ORDERS
+            if (horizontal == 0 && vertical == 0 && (pizza > 0 || burger > 0 || salad > 0) && isHolding == holding.Nothing)
+            {
+                currentType = 2;
+            }
+            if (horizontal == 0 && vertical == -1 && (pizza > 0 || burger > 0 || salad > 0) && isHolding == holding.Nothing)
+            {
+                currentType = 2;
+            }
+            if (horizontal == 0 && vertical == 1 && (pizza > 0 || burger > 0 || salad > 0) && isHolding == holding.Nothing)
+            {
+                currentType = 3;
+            }
+            if (horizontal == -1 && vertical == 0 && (pizza > 0 || burger > 0 || salad > 0) && isHolding == holding.Nothing)
+            {
+                currentType = 8;
+            }
+            if (horizontal == 1 && vertical == 0 && (pizza > 0 || burger > 0 || salad > 0) && isHolding == holding.Nothing) 
+            {
+                currentType = 9;
+            }
+            //HOLDING FOOD
+            if (horizontal == 0 && vertical == 0 && isHolding != holding.Nothing)
+            {
+                currentType = 4;
+            }
+            if (horizontal == 0 && vertical == -1 && isHolding != holding.Nothing)
+            {
+                currentType = 4;
+            }
+            if (horizontal == 0 && vertical == 1 && isHolding != holding.Nothing)
+            {
+                currentType = 5;
+            }
+            if (horizontal == -1 && vertical == 0 && isHolding != holding.Nothing)
+            {
+                currentType = 10;
+            }
+            if (horizontal == 1 && vertical == 0 && isHolding != holding.Nothing)
+            {
+                currentType = 11;
+            }
 
 
         }
