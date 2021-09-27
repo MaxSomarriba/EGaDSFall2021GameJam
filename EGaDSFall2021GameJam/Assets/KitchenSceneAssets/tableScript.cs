@@ -17,10 +17,15 @@ public class tableScript : MonoBehaviour
     public int timeToEatFood;
     public int paitenceLost;
     public SpriteRenderer spriteRenderer;
-    public BoxCollider2D _boxCollider2D;
+    public CircleCollider2D _CircleCollider2D;
+    public BoxCollider2D _BoxCollider2D;
     private AudioSource source;
     private static tableScript tableInstance;
+    private GameObject associatedFoodWant;
 
+    public GameObject pizzaFoodWant;
+    public GameObject burgerFoodWant;
+    public GameObject saladFoodWant;
 
     public enum food
     {
@@ -39,7 +44,8 @@ public class tableScript : MonoBehaviour
     void Start()
     {
         intialTimeBeforeLosingPaitenceAfterSittingDown = timeBeforeLosingPaitenceAfterSittingDown;
-        _boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
+        _CircleCollider2D = gameObject.GetComponent<CircleCollider2D>();
+        _BoxCollider2D = gameObject.GetComponent<BoxCollider2D>();
         playerScriptsUsedForFoodReference = GameObject.Find("Player");
         paitenceManagerScriptsUsedForLosingPaitence = GameObject.Find("PaitenceManager");
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
@@ -65,21 +71,14 @@ public class tableScript : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if (TableState == tableState.Ordering) {
-            m_SpriteRenderer.color = Color.blue;
-        }
-        if (TableState == tableState.Waiting) {
-            m_SpriteRenderer.color = Color.red;
-        }
-        if (TableState == tableState.Eating) {
-            m_SpriteRenderer.color = Color.yellow;
-        }
+        
 
         whatIsPlayerHolding = playerScriptsUsedForFoodReference.GetComponent<playerScripts>().getCurrentHolding();
         //For trigger
         if (sceneName == "restaurantScene")
         {
-            _boxCollider2D.enabled = true;
+            _BoxCollider2D.enabled = true;
+            _CircleCollider2D.enabled = true;
             spriteRenderer.enabled = true;
             if (triggerActive && Input.GetKeyDown(KeyCode.Space) && TableState == tableState.Ordering)
             {
@@ -93,7 +92,8 @@ public class tableScript : MonoBehaviour
         }
         else
         {
-            _boxCollider2D.enabled = false;
+            _BoxCollider2D.enabled = false;
+            _CircleCollider2D.enabled = false;
             spriteRenderer.enabled = false;
         }
         if (sceneName == "WinScene" || sceneName == "Gameover" || sceneName == "MainMenu")
@@ -137,14 +137,17 @@ public class tableScript : MonoBehaviour
         source.Play();
         if (order == food.Pizza)
         {
+            associatedFoodWant = Instantiate(pizzaFoodWant, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 1), Quaternion.identity);
             playerScriptsUsedForFoodReference.GetComponent<playerScripts>().addPizza();
         }
         if (order == food.Burger)
         {
+            associatedFoodWant = Instantiate(burgerFoodWant, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 1), Quaternion.identity);
             playerScriptsUsedForFoodReference.GetComponent<playerScripts>().addBurger();
         }
         if (order == food.Salad)
         {
+            associatedFoodWant = Instantiate(saladFoodWant, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z-1), Quaternion.identity);
             playerScriptsUsedForFoodReference.GetComponent<playerScripts>().addSalad();
         }
         TableState = tableState.Waiting;
@@ -165,6 +168,7 @@ public class tableScript : MonoBehaviour
     }
     public void TakeFood()
     {
+        Destroy(associatedFoodWant);
         StopAllCoroutines();
         playerScriptsUsedForFoodReference.GetComponent<playerScripts>().resetHolding();
         EatFood();
