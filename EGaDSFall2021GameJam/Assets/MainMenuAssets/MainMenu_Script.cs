@@ -24,8 +24,6 @@ public class MainMenu_Script : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("OfficeScene");
         UnityEngine.SceneManagement.SceneManager.LoadScene("restaurantScene");
         UnityEngine.SceneManagement.SceneManager.LoadScene("TransitionScene");
-        paitenceManagerUsedForReference.GetComponent<paitenceManagerScript>().gameRestart();
-        paperStackUsedForReference.GetComponent<PaperStack_Script>().gameRestart();
     }
 
     public void CreditsButton()

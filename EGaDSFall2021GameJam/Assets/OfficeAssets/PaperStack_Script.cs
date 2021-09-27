@@ -23,7 +23,8 @@ public class PaperStack_Script : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         string sceneName = scene.name;
         if (sceneName == "WinScene" || sceneName == "Gameover" || sceneName == "MainMenu") {
-            Destroy(gameObject);
+            stackSize = 10;
+            // Destroy(gameObject);
         }
     }
 
@@ -33,7 +34,8 @@ public class PaperStack_Script : MonoBehaviour
             stackSize++;
             if (stackSize > 30) {
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Gameover");
-                Destroy(gameObject);
+                stackSize = 10;
+                // Destroy(gameObject);
             }
         }
     }
@@ -51,6 +53,7 @@ public class PaperStack_Script : MonoBehaviour
             Object.Destroy(gameObject);
         }
     }
+
     public void gameRestart()
     {
         stackSize = 10;

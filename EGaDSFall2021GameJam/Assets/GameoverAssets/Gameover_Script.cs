@@ -6,15 +6,21 @@ public class Gameover_Script : MonoBehaviour
 {
     public GameObject Gameover;
     public GameObject CreditsMenu;
+    // private GameObject paitenceManagerUsedForReference;
+    // private GameObject paperStackUsedForReference;
 
     // Start is called before the first frame update
     void Start()
     {
+        // paitenceManagerUsedForReference = GameObject.Find("PaitenceManager");
+        // paperStackUsedForReference = GameObject.Find("PaperStack");
         GameoverButton();
     }
 
     public void MainMenuButton()
     {
+        // paitenceManagerUsedForReference.GetComponent<paitenceManagerScript>().gameRestart();
+        // paperStackUsedForReference.GetComponent<PaperStack_Script>().gameRestart();
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 

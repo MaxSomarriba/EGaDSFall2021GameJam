@@ -324,6 +324,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   img: {fileID: 1586962962}
   time: 2
+  spriteArraySign: []
+  spriteArrayStamp: []
+  spriteArrayStaple: []
 --- !u!114 &71276955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +341,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   img: {fileID: 1347666443}
   time: 2
+  spriteArraySign: []
+  spriteArrayStamp: []
+  spriteArrayStaple: []
 --- !u!114 &71276956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1202,12 +1208,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e7cbaf06e264142a65d93f801e86bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1292780229}
-  currentType: 0
   sprites:
-  - {fileID: -707033742908360085, guid: cc2338c3b1e66264287710188ac7614d, type: 3}
-  - {fileID: -8299235063760782096, guid: a37b9cecda5f1cf4f9fc414ef7f67180, type: 3}
-  - {fileID: -6354842006672242797, guid: c8cd0faab2dcb634e83a3f7b89c80121, type: 3}
+  - {fileID: -707033742908360085, guid: 680b3bb761003c84b9c79d4131d609db, type: 3}
+  - {fileID: -8299235063760782096, guid: 7cc956213f0e87343b538349756c3df4, type: 3}
+  - {fileID: -6354842006672242797, guid: 9c7e8ba84c30a9043ba723cfeae6967f, type: 3}
 --- !u!61 &1292780232
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1647,7 +1651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.6386991, b: 0.8396226, a: 1}
+  m_Color: {r: 0.7264151, g: 0.39928806, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PrimaryPaper_Script : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
+    public static SpriteRenderer spriteRenderer;
 
-    public int currentType;
+    public static int currentType;
     public static int selectedType;
 
     int[] types = {0, 1, 2};
+
     public Sprite[] sprites;
 
     private AudioSource source;

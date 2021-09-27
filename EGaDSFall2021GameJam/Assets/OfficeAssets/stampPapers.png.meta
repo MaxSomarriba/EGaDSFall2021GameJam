@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a37b9cecda5f1cf4f9fc414ef7f67180
+guid: 7cc956213f0e87343b538349756c3df4
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -97,6 +97,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -131,7 +143,7 @@ TextureImporter:
         height: 583
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 45, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -146,13 +158,13 @@ TextureImporter:
       name: stampPapers_2
       rect:
         serializedVersion: 2
-        x: 1030
+        x: 1044
         y: 0
-        width: 522
+        width: 522.5
         height: 583
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 29, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -167,9 +179,9 @@ TextureImporter:
       name: stampPapers_3
       rect:
         serializedVersion: 2
-        x: 1534
+        x: 1566
         y: 0
-        width: 522
+        width: 522.5
         height: 583
       alignment: 0
       pivot: {x: 0, y: 0}

@@ -67,6 +67,13 @@ public class paitenceManagerScript : MonoBehaviour
         {
             spriteRenderer.sprite = reallyMad;
         }
+
+        Scene scene = SceneManager.GetActiveScene();
+        string sceneName = scene.name;
+        if (sceneName == "WinScene" || sceneName == "Gameover" || sceneName == "MainMenu") {
+            totalPaitence = 10;
+            // Destroy(gameObject);
+        }
     }
     public void losePaitence(int amountOfPaitence)
     {
