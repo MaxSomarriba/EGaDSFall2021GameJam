@@ -18,7 +18,7 @@ public class kitchenScript : MonoBehaviour
     public GameObject burgerPrefab;
     public GameObject saladPrefab;
     private GameObject playerScriptsUsedForFoodReference;
-    public SpriteRenderer spriteRenderer;
+
     public BoxCollider2D _boxCollider2D;
     private AudioSource source;
     private static kitchenScript kitchenInstance;
@@ -29,7 +29,7 @@ public class kitchenScript : MonoBehaviour
         initialFoodCreationYOffset = foodCreationYOffset;
         playerScriptsUsedForFoodReference = GameObject.Find("Player");
         source = GetComponent<AudioSource>();
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
         _boxCollider2D = gameObject.GetComponent<BoxCollider2D>();
     }
     void Awake()
@@ -55,7 +55,7 @@ public class kitchenScript : MonoBehaviour
         if (sceneName == "restaurantScene")
         {
             _boxCollider2D.enabled = true;
-            spriteRenderer.enabled = true;
+            
             //For trigger
             if (triggerActive && Input.GetKeyDown(KeyCode.Space))
             {
@@ -66,7 +66,7 @@ public class kitchenScript : MonoBehaviour
         else
         {
             _boxCollider2D.enabled = false;
-            spriteRenderer.enabled = false;
+        
         }
         if (sceneName == "WinScene" || sceneName == "Gameover" || sceneName == "MainMenu")
         {
