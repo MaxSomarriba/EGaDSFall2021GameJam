@@ -181,6 +181,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   _CircleCollider2D: {fileID: 0}
   _BoxCollider2D: {fileID: 0}
+  pizzaFoodWant: {fileID: 4810782916263994155, guid: 45c594f6cf699984d9c938eb8ae618d8, type: 3}
+  burgerFoodWant: {fileID: 4810782916263994155, guid: 2cdd876ddbea298419ee528e8d9f3dea, type: 3}
+  saladFoodWant: {fileID: 4810782916263994155, guid: cebb0b48b00e61a409ebc352a48e0c21, type: 3}
   TableState: 0
 --- !u!61 &158083221
 BoxCollider2D:
@@ -1554,6 +1557,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   _CircleCollider2D: {fileID: 0}
   _BoxCollider2D: {fileID: 0}
+  pizzaFoodWant: {fileID: 4810782916263994155, guid: 45c594f6cf699984d9c938eb8ae618d8, type: 3}
+  burgerFoodWant: {fileID: 4810782916263994155, guid: 2cdd876ddbea298419ee528e8d9f3dea, type: 3}
+  saladFoodWant: {fileID: 4810782916263994155, guid: cebb0b48b00e61a409ebc352a48e0c21, type: 3}
   TableState: 0
 --- !u!61 &1244885082
 BoxCollider2D:
