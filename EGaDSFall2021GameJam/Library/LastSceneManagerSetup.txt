@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/OfficeScene.unity
+=======
+- path: Assets/Scenes/MainMenu.unity
+>>>>>>> RestaurantBranch
   isLoaded: 1
   isActive: 1
   isSubScene: 0

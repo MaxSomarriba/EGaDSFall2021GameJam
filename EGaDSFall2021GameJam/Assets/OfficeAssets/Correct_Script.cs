@@ -36,6 +36,7 @@ public class Correct_Script : MonoBehaviour
     IEnumerator SpawnTimer() {
         if (isImgOn) {
             show();
+            /*
             if (PrimaryPaper_Script.currentType == 0) {
                 PrimaryPaper_Script.spriteRenderer.sprite = spriteArraySign[1];
             } else if (PrimaryPaper_Script.currentType == 1) {
@@ -43,6 +44,7 @@ public class Correct_Script : MonoBehaviour
             } else {
                 PrimaryPaper_Script.spriteRenderer.sprite = spriteArrayStaple[1];
             }
+            */
             yield return new WaitForSeconds(time);
             hide();
         }

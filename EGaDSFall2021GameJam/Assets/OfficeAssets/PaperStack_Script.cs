@@ -8,7 +8,7 @@ public class PaperStack_Script : MonoBehaviour
     private static PaperStack_Script playerInstance;
 
     public static int stackSize = 10;
-    public float TimeSeconds = 5;
+    public float TimeSeconds = 1;
 
 
     // Start is called before the first frame update
